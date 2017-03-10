@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
+    <p id = "para">try me!</p>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
@@ -37,6 +38,7 @@
         });
         console.log('testing...');
         socket.on('chat message', function(msg){
+          document.getElementById('para').innerHTML = "nice try";
           $('#messages').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);
         });

@@ -11,8 +11,7 @@ io.on('connection', function(socket){
     console.log('i think i saw something...');
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
-    alert('message: ' + msg);
-    alert('chat message', msg);
+ 
   });
 });
 io.on('connection', function(socket){

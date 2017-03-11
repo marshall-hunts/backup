@@ -89,7 +89,7 @@ Your browser does not support the HTML5 canvas tag.</canvas>
       socket.emit('ademola', 'try meee');
       document.getElementById("myBtn").onclick = function(){
       socket.emit('ademola', 'try meee');
-        alert("that's nice");
+       
       }
     }
         });
@@ -103,7 +103,7 @@ var ctx = c.getContext("2d");
         });
         
         socket.on('ademola', function(gme){
-         
+          alert("that's nice");
 ctx.rect(20, 20, 150, 100);
 ctx.stroke();
         })

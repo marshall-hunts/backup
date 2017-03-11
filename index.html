@@ -39,6 +39,9 @@
         });
      document.getElementById("myBtn").onclick = function(){
            socket.emit('chat message', alert('ok'));
+       socket.on('chat message', function(msg){
+         alert(msg);
+       }
           }
         socket.on('chat message', function(msg){
           document.getElementById('para').innerHTML = "nice try";

@@ -40,7 +40,12 @@
              console.log(msg);
             online += 1;
              document.getElementById('para').innerHTML = online;
-            if(online === 3){
+            
+          })
+         
+});
+      
+        if(online === 3){
              document.getElementById('para').onclick = function(){
              alert('hi');
                socket.emit('chat message', 'you there');
@@ -49,10 +54,7 @@
                });
              }
             }
-          })
-         
-});
-      
+        
         $('form').submit(function(){
           socket.emit('chat message', $('#m').val());
           $('#m').val('');

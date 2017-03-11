@@ -44,7 +44,7 @@
        });
           }
       socket.on('chat message', function(msg){
-         document.getElementById("myBtn").innerHTML = 'right!';
+         document.getElementById("myBtn").style.width += msg;
        });
         /*$( "#myBtn" ).click(function() {
   socket.emit('chat message', 'hi');

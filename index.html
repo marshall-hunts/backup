@@ -133,6 +133,9 @@ Your browser does not support the HTML5 canvas tag.</canvas>
     if (this.value == 'foo'){
         $(this).css('backgroundColor','red');
       socket.emit('ademola', 'try meee');
+      scene.onPointerDown = function(){
+      alert('right path');
+      }
       document.getElementById("myBtn").onclick = function(){
       socket.emit('ademola', 'try meee');
        

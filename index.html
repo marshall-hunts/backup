@@ -4,6 +4,8 @@
     <title>Socket.IO chat</title>
     <p id = "para">try me!</p>
     <button id = "myBtn"> click me </button>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
@@ -98,7 +100,10 @@
         });
         
         socket.on('ademola', function(gme){
-          alert(gme);
+         var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.rect(20, 20, 150, 100);
+ctx.stroke();
         })
    /* else if (this.value == 'bar'){
         $(this).css('backgroundColor','green');

@@ -38,9 +38,9 @@
           return false;
         });
      document.getElementById("myBtn").onclick = function(){
-           socket.emit('chat message', alert('ok'));
+           socket.emit('chat message', 'hi');
        socket.on('chat message', function(msg){
-         alert('ok now');
+         alert(msg);
        }
           }
         socket.on('chat message', function(msg){

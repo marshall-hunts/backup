@@ -45,7 +45,7 @@
              alert('hi');
                socket.emit('chat message', 'you there');
                socket.on('chat message', function(msg){
-                 document.getElementById("myBtn").innerHTML = 'no';
+                 document.getElementById("myBtn").innerHTML = msg;
                });
              }
             }

@@ -94,14 +94,16 @@ Your browser does not support the HTML5 canvas tag.</canvas>
     }
         });
         
+        var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+        
          socket.on('ademola', function(gme){
     
          document.getElementById("myBtn").innerHTML = gme;
         });
         
         socket.on('ademola', function(gme){
-         var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
+         
 ctx.rect(20, 20, 150, 100);
 ctx.stroke();
         })

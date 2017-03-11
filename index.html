@@ -85,12 +85,21 @@
     if (this.value == 'foo'){
         $(this).css('backgroundColor','red');
       socket.emit('ademola', 'try meee');
+      document.getElementById("myBtn").onclick = function(){
+      socket.emit('ademola', 'try meee');
+        alert("that's nice");
+      }
     }
         });
+        
          socket.on('ademola', function(gme){
-      
+    
          document.getElementById("myBtn").innerHTML = gme;
         });
+        
+        socket.on('ademola', function(gme){
+          alert(gme);
+        })
    /* else if (this.value == 'bar'){
         $(this).css('backgroundColor','green');
     }

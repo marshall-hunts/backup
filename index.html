@@ -40,6 +40,11 @@
              console.log(msg);
             online += 1;
              document.getElementById('para').innerHTML = online;
+            if(online === 3){
+             document.getElementById('para').onclick = function(){
+             alert('hi');
+             }
+            }
           })
          
 });

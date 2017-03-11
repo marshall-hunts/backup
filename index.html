@@ -41,10 +41,13 @@
              //document.getElementById("myBtn").innerHTML = 'nice bruh';
             online += 1;
              document.getElementById('para').innerHTML = online;
+             if(online > 3){
+               online = 3
+             }
               if(online === 3){
              document.getElementById('para').onclick = function(){
              alert('hi');
-               socket.broadcast.emit('chat message', 'you there');
+               socket.emit('chat message', 'you there');
                /*socket.emit('chat message', 'you there');
                socket.on('chat message', function(msg){
                  document.getElementById("myBtn").innerHTML = msg;

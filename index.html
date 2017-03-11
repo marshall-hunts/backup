@@ -40,7 +40,7 @@
      document.getElementById("myBtn").onclick = function(){
            socket.emit('chat message', '20px');
        socket.on('chat message', function(msg){
-         document.getElementById("myBtn").style.width = msg;
+         document.getElementById("myBtn").innerHTML = 'right!';
        });
           }
         /*$( "#myBtn" ).click(function() {

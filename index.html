@@ -35,15 +35,14 @@
         $('form').submit(function(){
           socket.emit('chat message', $('#m').val());
           $('#m').val('');
-          alert($('#m').val(''));
           return false;
         });
-        console.log('testing...');
+     document.getElementById("myBtn").onclick = function(){
+           socket.emit('chat message', alert('ok'));
+          }
         socket.on('chat message', function(msg){
           document.getElementById('para').innerHTML = "nice try";
-          document.getElementById("myBtn").onclick = function(){
-          console.log('ok');
-          }
+          
             
           $('#messages').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);

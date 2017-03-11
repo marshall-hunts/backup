@@ -80,6 +80,16 @@
          document.getElementById("myBtn").style.width += msg;
         });
        });
+        
+        $("#m").keyup(function(e) { 
+    if (this.value == 'foo'){
+        $(this).css('backgroundColor','red');
+    }
+    else if (this.value == 'bar'){
+        $(this).css('backgroundColor','green');
+    }
+    else $(this).css('backgroundColor','white');
+});
         /*$( "#myBtn" ).click(function() {
   socket.emit('chat message', 'hi');
        socket.on('chat message', function(msg){

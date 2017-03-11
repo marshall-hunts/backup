@@ -43,6 +43,9 @@
             if(online === 3){
              document.getElementById('para').onclick = function(){
              alert('hi');
+               socket.on('chat message', function(msg){
+                 alert('hi');
+               });
              }
             }
           })

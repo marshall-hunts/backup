@@ -43,8 +43,9 @@
          document.getElementById("myBtn").innerHTML = 'right!';
        });
           }
+       setInterval(function(){
       socket.on('chat message', function(msg){
-        setInterval(function(){
+      
          document.getElementById("myBtn").style.width += msg;
         });
        });

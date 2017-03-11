@@ -34,14 +34,13 @@
         var socket = io();
         socket.on('connect', function() {
   socket.emit('im online');
-          console.log('online');
+           console.log('online');
+          socket.on('im online', function(){
+            alert('online')
+          })
+         
 });
-       socket.on("disconnect", function () {
-    // announce the offline status of a new user
-    socket.broadcast.emit('disconnected user',  {"name": socket.handshake.headers.user.username});
-         console.log('gone');
-});
-        
+      
         $('form').submit(function(){
           socket.emit('chat message', $('#m').val());
           $('#m').val('');

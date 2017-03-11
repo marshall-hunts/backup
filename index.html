@@ -84,12 +84,12 @@
         $("#m").keyup(function(e) { 
     if (this.value == 'foo'){
         $(this).css('backgroundColor','red');
-      socket.emit('chat message', 'try meee');
+      socket.emit('ademola', 'try meee');
     }
         });
-         socket.on('chat message', function(msg){
+         socket.on('ademola', function(gme){
       
-         document.getElementById("myBtn").innerHTML = msg;
+         document.getElementById("myBtn").innerHTML = gme;
         });
    /* else if (this.value == 'bar'){
         $(this).css('backgroundColor','green');

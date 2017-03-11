@@ -42,7 +42,7 @@
         socket.on('chat message', function(msg){
           document.getElementById('para').innerHTML = "nice try";
           document.getElementById("myBtn").addEventListener("click", function(){
-            document.getElementById("myBtn").innerHTML = "ok";
+            console.log('ok');
           });
             
           $('#messages').append($('<li>').text(msg));

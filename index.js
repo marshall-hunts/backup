@@ -13,6 +13,10 @@ io.on('connection', function(socket){
     io.emit('chat message', msg);
  console.log('i think i saw something...');
   });
+  //game try!
+  socket.on('ademola', function(gme){
+    io.emit('ademola', gme);
+  });
 });
 
 http.listen(port, function(){

@@ -41,9 +41,9 @@
         console.log('testing...');
         socket.on('chat message', function(msg){
           document.getElementById('para').innerHTML = "nice try";
-          document.getElementById("myBtn").addEventListener("click", function(){
-            console.log('ok');
-          });
+          document.getElementById("myBtn").onclick = function(){
+          console.log('ok');
+          }
             
           $('#messages').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);

@@ -37,18 +37,19 @@
           $('#m').val('');
           return false;
         });
-     /* document.getElementById("myBtn").onclick = function(){
-           socket.emit('chat message', 'hi');
+     document.getElementById("myBtn").onclick = function(){
+           socket.emit('chat message', 'eureka!');
        socket.on('chat message', function(msg){
          alert(msg);
-       }
-          }*/
-        $( "#myBtn" ).click(function() {
+       });
+          }
+        /*$( "#myBtn" ).click(function() {
   socket.emit('chat message', 'hi');
        socket.on('chat message', function(msg){
          alert(msg);
        });
-});
+});*/
+        
         socket.on('chat message', function(msg){
           document.getElementById('para').innerHTML = "nice try";
           
